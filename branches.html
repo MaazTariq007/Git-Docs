@@ -1,72 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Git and GitHub Documentation - Terminology</title>
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
     <!-- Link to TailwindCSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
-</head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body class="bg-gray-900 text-gray-200 font-poppins leading-relaxed">
-
+  <body class="bg-gray-900 text-gray-200 font-poppins leading-relaxed">
     <header class="bg-gray-800 py-6">
-        <h1 class="text-4xl font-semibold text-center text-white">Branched in git</h1>
+      <h1 class="text-4xl font-semibold text-center text-white">
+        Branched in git
+      </h1>
     </header>
 
     <main class="p-6 space-y-10 w-[90%] mx-auto">
+      <section class="my-16">
+        <h2 class="text-4xl font-bold text-gray-100 mb-4">
+          🌿 Branches in Git
+        </h2>
 
-        <section>
-            <h2 class="text-3xl font-semibold text-gray-100">Branches in Git</h2>
-            <p class="text-lg text-gray-400">
-                Branches are a way to work on different versions of a project at the same time. They allow you to create
-                a
-                separate line of development that can be worked on independently of the main branch. This can be really
-                useful
-                when you want to make changes to a project without affecting the main branch — or when you're cooking up
-                a new
-                feature or squashing some bugs 🐞.
-            </p>
-        </section>
+        <p class="text-lg text-gray-400">
+          Think of a <span class="font-semibold text-green-400">branch</span> as
+          a parallel universe for your code. It’s a clean space where you can
+          experiment, add features, or fix bugs — without touching the original
+          codebase.
+        </p>
 
-        <section class="h-auto">
-            <img src="bracnhes.PNG" alt="Git Image"
-                class="w-[600px] h-auto object-cover rounded-lg shadow-md mt-6 mx-auto">
-        </section>
+        <p class="text-lg text-gray-400 mt-4">
+          When you're working on a new feature, it's best to create a new
+          branch. That way, the your <b>default</b> branch (usually called
+          <code class="text-yellow-400 font-semibold">main</code> or
+          <code class="text-yellow-400 font-semibold">master</code>) stays clean
+          and stable.
+        </p>
+      </section>
+      <!-- Branch Usage Example -->
+      <section>
+        <p class="text-lg text-gray-400">
+          Picture a team building a website: one developer is working on the
+          header, another on the footer, someone else is handling the content,
+          and another is designing the layout. Each of these tasks can be done
+          in separate branches, all happening in parallel — and none of them
+          interfere with the main version of the project. That’s the magic of
+          branches ✨.
+        </p>
+      </section>
 
-        <!-- Branch Usage Example -->
-        <section>
-            <p class="text-lg text-gray-400">
-                Picture a team building a website: one developer is working on the header, another on the footer,
-                someone else
-                is handling the content, and another is designing the layout. Each of these tasks can be done in
-                separate
-                branches, all happening in parallel — and none of them interfere with the main version of the project.
-                That’s the
-                magic of branches ✨.
-            </p>
-        </section>
+      <section class="h-auto">
+        <img
+          src="bracnhes.PNG"
+          alt="Git Image"
+          class="w-[900px] h-auto object-cover rounded-lg shadow-md mt-6 mx-auto"
+        />
+      </section>
 
+      <div
+        class="my-10 h-[1px] bg-gradient-to-r from-transparent via-gray-700 to-transparent"
+      ></div>
 
-        <!-- Button to move to next page -->
-        <div class="flex justify-center gap-4">
-            <div class="flex justify-center">
-                <a href="terminology.html"
-                    class="bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-500 transition">Previous</a>
-            </div>
-            <!-- Button to move to next page -->
-            <div class="flex justify-center">
-                <a href="#"
-                    class="bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-500 transition">Next</a>
-            </div>
+      <section>
+        <h3 class="text-2xl font-semibold text-gray-200 mt-6 mb-2">
+          🧪 Step 1: View All Branches
+        </h3>
+        <p class="text-lg text-gray-400">
+          Before doing anything, you can list all branches in your repository
+          using:
+        </p>
+        <div class="bg-gray-800 text-white p-4 rounded-lg mt-2">
+          <code class="text-green-400 text-xl">git branch</code>
         </div>
+        <p class="text-lg text-gray-400 mt-2">
+          This shows all branches. The current branch is highlighted with an
+          asterisk (<span class="text-yellow-400">*</span>).
+        </p>
 
+        <h3 class="text-2xl font-semibold text-gray-200 mt-8 mb-2">
+          🌱 Step 2: Create a New Branch
+        </h3>
+        <p class="text-lg text-gray-400">
+          To create a new branch without switching to it:
+        </p>
+        <div class="bg-gray-800 text-white p-4 rounded-lg mt-2">
+          <code class="text-green-400 text-xl"
+            >git branch &lt;branch-name&gt;</code
+          >
+        </div>
+        <p class="text-lg text-gray-400 mt-2">
+          This creates a new branch pointing to your current commit. You’re
+          still on the previous branch.
+        </p>
+
+        <h3 class="text-2xl font-semibold text-gray-200 mt-8 mb-2">
+          🚀 Step 3: Switch to the Branch
+        </h3>
+        <p class="text-lg text-gray-400">
+          After creating a branch, switch to it with:
+        </p>
+        <div class="bg-gray-800 text-white p-4 rounded-lg mt-2">
+          <code class="text-green-400 text-xl"
+            >git checkout &lt;branch-name&gt;</code
+          >
+        </div>
+        <p class="text-lg text-gray-400 mt-2">
+          You are now in a different line of development. All changes will be
+          tracked on this branch.
+        </p>
+
+        <h3 class="text-2xl font-semibold text-gray-200 mt-8 mb-2">
+          ✨ Alternative: <code class="text-green-400">git switch</code>
+        </h3>
+        <p class="text-lg text-gray-400">
+          Git introduced the
+          <span class="font-semibold text-white">git switch</span> command to
+          make switching branches more intuitive:
+        </p>
+        <div class="bg-gray-800 text-white p-4 rounded-lg mt-2">
+          <code class="text-green-400 text-xl"
+            >git switch &lt;branch-name&gt;</code
+          >
+        </div>
+        <p class="text-lg text-gray-400 mt-2">
+          It's easier to remember and less ambiguous than
+          <code class="text-green-400">checkout</code> when dealing with
+          branches.
+        </p>
+
+        <h3 class="text-2xl font-semibold text-gray-200 mt-8 mb-2">
+          ⚡ Shortcut: Create & Switch
+        </h3>
+        <p class="text-lg text-gray-400">
+          Git also offers a shortcut that does both — create a branch and switch
+          to it:
+        </p>
+        <div class="bg-gray-800 text-white p-4 rounded-lg mt-2">
+          <code class="text-green-400 text-xl"
+            >git checkout -b &lt;branch-name&gt;</code
+          >
+        </div>
+        <p class="text-lg text-gray-400 mt-2">
+          This is the most commonly used approach when starting work on a new
+          feature or fix.
+        </p>
+
+        <h3 class="text-2xl font-semibold text-gray-200 mt-8 mb-2">
+          🔍 See Which Branch You’re On
+        </h3>
+        <p class="text-lg text-gray-400">
+          You can check which branch you’re currently on by running:
+        </p>
+        <div class="bg-gray-800 text-white p-4 rounded-lg mt-2">
+          <code class="text-green-400 text-xl">git branch</code>
+        </div>
+        <p class="text-lg text-gray-400 mt-2">
+          The active branch will be highlighted with an asterisk (<span
+            class="text-yellow-400"
+            >*</span
+          >).
+        </p>
+
+        <h3 class="text-2xl font-semibold text-gray-200 mt-8 mb-2">
+          🧠 Understanding <span class="text-white">HEAD</span> in Git
+        </h3>
+        <p class="text-lg text-gray-400">
+          The <code class="text-green-400">HEAD</code> is a special pointer in
+          Git. It always points to the latest commit on your current branch.
+        </p>
+        <p class="text-lg text-gray-400 mt-2">
+          To see where <code class="text-green-400">HEAD</code> is pointing, you
+          can use:
+        </p>
+        <div class="bg-gray-800 text-white p-4 rounded-lg mt-2">
+          <code class="text-green-400 text-xl"
+            >git log --oneline --decorate</code
+          >
+        </div>
+        <p class="text-lg text-gray-400 mt-2">
+          This will show you recent commits and highlight where
+          <span class="text-yellow-400">HEAD</span> and your branch names are
+          pointing.
+        </p>
+
+        <h3 class="text-2xl font-semibold text-gray-200 mt-8 mb-2">
+          📍 Main vs Master
+        </h3>
+        <p class="text-lg text-gray-400">
+          The default branch used to be called
+          <code class="text-yellow-400">master</code>, but modern Git uses
+          <code class="text-yellow-400">main</code>. There’s nothing technically
+          special about <code class="text-white">main</code> — it’s just a
+          naming convention.
+        </p>
+      </section>
+
+      <div
+        class="my-10 h-[1px] bg-gradient-to-r from-transparent via-gray-700 to-transparent"
+      ></div>
+
+      <!-- Button to move to next page -->
+      <div class="flex justify-center gap-4">
+        <div class="flex justify-center">
+          <a
+            href="terminology.html"
+            class="bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-500 transition"
+            >Previous</a
+          >
+        </div>
+        <!-- Button to move to next page -->
+        <div class="flex justify-center">
+          <a
+            href="#"
+            class="bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-500 transition"
+            >Next</a
+          >
+        </div>
+      </div>
     </main>
-
-
-</body>
-
+  </body>
 </html>

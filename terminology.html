@@ -1,318 +1,531 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Git and GitHub Documentation - Terminology</title>
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
     <!-- Link to TailwindCSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
-</head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body class="bg-gray-900 text-gray-200 font-poppins leading-relaxed">
-
+  <body class="bg-gray-900 text-gray-200 font-poppins leading-relaxed">
     <header class="bg-gray-800 py-6">
-        <h1 class="text-4xl font-semibold text-center text-white">Git and GitHub Documentation - Terminology</h1>
+      <h1 class="text-4xl font-semibold text-center text-white">
+        Git and GitHub Documentation - Terminology
+      </h1>
     </header>
 
     <main class="p-6 space-y-10 w-[90%] mx-auto">
+      <!-- Terminology Section -->
+      <section class="my-8">
+        <h2 class="text-4xl font-bold text-gray-100">Terminology</h2>
+        <p class="text-lg text-gray-400">
+          Git and people who use it talk in a different terminology. For
+          example, they don’t call it a folder, they call it a
+          <strong>repository</strong>. They don’t call it an alternative
+          timeline, they call it a <strong>branch</strong>. Although, I agree
+          that alternative timeline is a better name for it. 😁
+        </p>
+      </section>
 
-        <!-- Terminology Section -->
-        <section>
-            <h2 class="text-3xl font-semibold text-gray-100">Terminology</h2>
-            <p class="text-lg text-gray-400">Git and people who use it talk in a different terminology. For example,
-                they don’t call it a folder, they call it a <strong>repository</strong>. They don’t call it an
-                alternative timeline, they call it a <strong>branch</strong>. Although, I agree that alternative
-                timeline
-                is a better name for it. 😁</p>
-        </section>
+      <div class="my-12 h-[1px] bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
 
-        <!-- Repository Image Section -->
-        <section class="h-auto">
-            <img src="https://phoenixnap.com/glossary/wp-content/uploads/2024/07/what-is-a-repository.jpg"
-                alt="Repository Image"
-                class="w-[500px] h-[400px] w-screen object-cover rounded-lg shadow-md mt-6 mx-auto">
-        </section>
 
-        <!-- ========================= -->
+      <!-- Repository Image Section -->
+      <!-- <section class="h-auto">
+        <img
+          src="https://phoenixnap.com/glossary/wp-content/uploads/2024/07/what-is-a-repository.jpg"
+          alt="Repository Image"
+          class="w-[500px] h-[400px] w-screen object-cover rounded-lg shadow-md mt-6 mx-auto"
+        />
+      </section> -->
 
-        <section>
-            <h2 class="text-3xl font-semibold text-gray-100">Check Your Git Version</h2>
-            <p class="text-lg text-gray-400">To check your git version, you can run the following command:</p>
+      <!-- Git Version  -->
+      <section>
+        <h2 class="text-4xl font-bold text-gray-100">
+          Step 1: Check Your Git Version
+        </h2>
+        <p class="text-lg text-gray-400">
+          We have already downloaded Git on your system, and now you can check
+          its version.
+        </p>
 
-            <div class="bg-gray-800 text-white p-4 rounded-lg mt-4">
-                <code class="text-green-400 text-xl">git --version</code>
+        <p class="text-lg text-gray-400">
+          Step One: Open any IDE. In this case, we will use
+          <a
+            href="https://visualstudio.microsoft.com/"
+            class="text-blue-400 hover:underline"
+            >Visual Studio</a
+          >
+          (you can download it from the official site). Once you have it open,
+          use the shortcut to open the terminal.
+        </p>
+        <ul class="list-disc list-inside text-gray-400 text-lg mt-2">
+          <li>
+            Going to the top menu and selecting <strong>View</strong> →
+            <strong>Terminal</strong>
+          </li>
+          <li>
+            Or using the shortcut key: <strong>Ctrl + `</strong> (the backtick
+            key, usually located under the Esc key)
+          </li>
+        </ul>
+
+        <div class="bg-gray-800 text-white p-4 rounded-lg mt-4">
+          <code class="text-green-400 text-xl">git --version</code>
+        </div>
+
+        <p class="text-lg text-gray-400 mt-4">
+          This command will display the version of Git installed on your system.
+          Git is a very stable software and doesn’t get any breaking changes in
+          the majority of cases, at least in my experience.
+        </p>
+      </section>
+
+      <div class="my-12 h-[1px] bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
+
+      <!-- Your Config Settings Section -->
+      <section>
+        <h2 class="text-4xl font-bold text-gray-100">
+          Step 2: Complete Your Git & GitHub Setup (Git config)
+        </h2>
+        <p class="text-lg text-gray-400">
+          Before we start exploring Git in action, let’s complete one-time setup
+          for both Git and GitHub by configuring your basic identity. This
+          includes setting your name and email — these are essential, as Git
+          uses them to label your work every time you make a change (also called
+          a commit).
+        </p>
+
+        <p class="text-lg text-gray-400 mt-4">
+          GitHub has a lot of settings that you can change. You can change your
+          username, email, and other settings. Whenever you checkpoint your
+          changes, Git will add some information about you, such as your
+          username and email, to the commit. There is a Git config file that
+          stores all the settings that you have changed. You can also set
+          preferences like what editor you'd like to use, and there are both
+          global and repository-specific settings.
+        </p>
+
+        <p class="text-lg text-gray-400 mt-4">
+          Let’s set up your email and username in this config file. I recommend
+          you create an account on
+          <a href="https://github.com" class="text-blue-400 hover:underline"
+            >GitHub</a
+          >
+          and then use the same email and username here for consistency.
+        </p>
+
+        <div class="bg-gray-800 text-white p-4 rounded-lg mt-4">
+          <code class="text-green-400 text-xl"
+            >git config --global user.email "your-email@example.com"</code
+          ><br />
+          <code class="text-green-400 text-xl"
+            >git config --global user.name "Your Name"</code
+          >
+        </div>
+
+        <p class="text-lg text-gray-400 mt-4">
+          This sets your global identity which will be used across all your Git
+          projects. Now you can check your current configuration settings:
+        </p>
+
+        <div class="bg-gray-800 text-white p-4 rounded-lg mt-4">
+          <code class="text-green-400 text-xl">git config --list</code>
+        </div>
+
+        <p class="text-lg text-gray-400 mt-4">
+          This will display all the settings you've configured so far. If you
+          ever want to change anything, you can always come back to update them.
+          You can also create project-specific (repository-level) settings if
+          needed later on.
+        </p>
+      </section>
+
+      <div class="my-12 h-[1px] bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
+
+      <!-- Repository Section -->
+      <section class="my-8">
+        <h2 class="text-4xl font-bold text-gray-100">
+          Step 3: Understanding Git Tracking
+        </h2>
+
+        <p class="text-lg text-gray-400">
+          Git doesn’t keep an eye on everything in your system — it only tracks
+          the files and folders you tell it to. The moment you initialize a Git
+          repository in a folder, Git starts watching what happens inside that
+          folder.
+        </p>
+
+        <p class="text-lg text-gray-400 mt-4">
+          To check what Git is currently tracking or ignoring inside your
+          project folder, you can use:
+        </p>
+
+        <div class="bg-gray-800 text-white p-4 rounded-lg mt-4">
+          <code class="text-green-400 text-xl">git status</code>
+        </div>
+
+        <p class="text-lg text-gray-400 mt-4">
+          This command will show you all the tracked, modified, new (untracked),
+          and staged files — giving you a live snapshot of your project's
+          current state.
+        </p>
+
+        <p class="text-lg text-red-400 mt-4 italic">
+          ⚠️ If you haven’t initialized Git using
+          <code class="text-green-400">git init</code>, running
+          <code class="text-green-400">git status</code> will give you an error
+          like
+          <strong
+            >"fatal: not a git repository (or any of the parent directories):
+            .git"</strong
+          >. So make sure you’ve initialized the folder first!
+        </p>
+      </section>
+
+      <div class="my-12 h-[1px] bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
+
+      <!-- Visual Diagram Section -->
+      <section class="h-auto">
+        <img
+          src="picturepng.png"
+          alt="Git Tracked vs Untracked Files"
+          class="w-[70%] max-w-[500px] object-cover rounded-lg shadow-md mt-6 mx-auto"
+        />
+      </section>
+
+      <section>
+        <p class="text-lg text-gray-400 mt-4">
+          In the diagram above, all
+          <span class="text-green-400 font-semibold">green boxes</span>
+          represent folders or files that Git is currently tracking — changes in
+          them will be noticed and recorded by Git. Meanwhile, the
+          <span class="text-red-400 font-semibold">red boxes</span> show files
+          or folders that Git is ignoring or unaware of.
+        </p>
+
+        <p class="text-lg text-gray-400 mt-4">
+          If you want Git to start tracking a red (untracked) file, you simply
+          need to add it using
+          <code class="text-green-400">git add &lt;filename&gt;</code>. Git is
+          all about control — it only tracks what you tell it to.
+        </p>
+      </section>
+
+      <div class="my-12 h-[1px] bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
+
+      <!-- Creating a Repository Section -->
+      <section class="my-8">
+        <h2 class="text-4xl font-bold text-gray-100">
+          Step 4: Creating a Repository
+        </h2>
+        <p class="text-lg text-gray-400">
+          Creating a repository means telling Git to start watching a folder on
+          your system. It's just a regular folder where your project lives — you
+          simply initialize it with Git.
+        </p>
+
+        <div class="bg-gray-800 text-white p-4 rounded-lg mt-4">
+          <code class="text-green-400 text-xl">git init</code>
+        </div>
+
+        <p class="text-lg text-gray-400 mt-4">
+          Running the <code class="text-green-400">git init</code> command will
+          convert your current folder into a Git repository. This adds a hidden
+          <code class="text-green-400">.git</code> directory to your project,
+          which Git uses to store and manage all version history and
+          configuration.
+        </p>
+      </section>
+
+      <div class="my-12 h-[1px] bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
+
+      <!-- Commit Section -->
+      <section class="my-8">
+        <h2 class="text-4xl font-bold text-gray-100">
+          Step 5: Writing, Adding & Committing Code
+        </h2>
+
+        <p class="text-lg text-gray-400 mt-2">
+          Now that Git is watching your folder, it's time to actually make some
+          changes. Here's how the typical Git workflow works — think of it as a
+          three-step habit:
+        </p>
+
+        <ol class="list-decimal text-lg text-gray-400 mt-4 pl-6 space-y-3">
+          <li>
+            <span class="text-white font-semibold">Write some code:</span>
+            Create or edit a file in your project. This could be anything — a
+            simple <code class="text-green-400">index.html</code>, a style
+            sheet, or a script file.
+          </li>
+
+          <li>
+            <span class="text-white font-semibold"
+              >Add the file to staging:</span
+            >
+            Once you’ve written some code, you’ll tell Git which files to track
+            using:
+            <div class="bg-gray-800 text-white p-4 rounded-lg mt-2">
+              <code class="text-green-400 text-xl"
+                >git add &lt;filename&gt;</code
+              ><br />
+              <code class="text-green-400 text-xl">git add .</code>
+              <span class="text-gray-400"
+                >// adds everything in the folder</span
+              >
             </div>
+            <p class="text-gray-400 mt-2">
+              This places your file in the <strong>staging area</strong> — a
+              space where changes are gathered before being saved permanently.
+              Think of it as selecting which changes are ready to be snapshot.
+            </p>
+          </li>
 
-            <p class="text-lg text-gray-400 mt-4">This command will display the version of git installed on your system.
-                Git is a very stable software and doesn’t get any breaking changes in the majority of cases, at least in
-                my experience.</p>
-        </section>
-
-
-        <!-- Repository Section -->
-        <section>
-            <h2 class="text-3xl font-semibold text-gray-100">Repository</h2>
-            <p class="text-lg text-gray-400">A repository is a collection of files and directories that are stored
-                together. It is a way to store and manage your code. A repository is like a folder on your computer, but
-                it is more than just a folder. It can contain other files, folders, and even other repositories. You can
-                think of a repository as a container that holds all your code.</p>
-            <p class="text-lg text-gray-400 mt-4">There is a difference between a software on your system vs tracking a
-                particular folder on your system. At any point, you can run the following command to see the current
-                state of your repository:</p>
-
-            <div class="bg-gray-800 text-white p-4 rounded-lg mt-4">
-                <code class="text-green-400 text-xl">git status</code>
+          <li>
+            <span class="text-white font-semibold">Commit the changes:</span>
+            When you’re confident with your changes, save them using a commit.
+            <div class="bg-gray-800 text-white p-4 rounded-lg mt-2">
+              <code class="text-green-400 text-xl"
+                >git commit -m "Add homepage structure"</code
+              >
             </div>
+            <p class="text-gray-400 mt-2">
+              Always use the <code class="text-green-400">-m</code> flag to
+              provide a clear commit message. This helps describe what you did,
+              avoids terminal editors opening up unexpectedly, and keeps things
+              clean and trackable.
+            </p>
+          </li>
+        </ol>
 
-            <p class="text-lg text-gray-400 mt-4">Git will display the current state of your repository. For example, it
-                will show you which files have been modified, added, or deleted. This helps you track changes and makes
-                it easier to collaborate with others.</p>
-        </section>
+        <p class="text-lg text-gray-400 mt-6">
+          A <strong>commit</strong> is like taking a snapshot of your current
+          project. It captures the state of all staged files at that moment.
+          This means you can always rewind, compare, or review your work at any
+          point in the future.
+        </p>
 
-        <!-- Git and GitHub Section -->
+        <img
+          src="process.PNG"
+          alt="Repository Image"
+          class="w-[500px] h-auto w-[70%] object-cover rounded-lg shadow-md mt-6 mx-auto"
+        />
 
-        <section class="h-auto">
-            <img src="picturepng.png" alt="Repository Image"
-                class="w-[500px] h-auto w-[70%] object-cover rounded-lg shadow-md mt-6 mx-auto">
-        </section>
+        <div class="bg-gray-700 text-white p-4 rounded-lg mt-4">
+          <strong class="text-green-400">In short:</strong><br />
+          You write → <code class="text-green-400">git add</code> to stage →
+          <code class="text-green-400">git commit -m ""</code> to save.
+        </div>
+      </section>
+
+      <!-- Complete Git Flow Section -->
+      <section>
+        <h2 class="text-2xl font-bold text-gray-100">Complete Git Flow</h2>
+        <p class="text-lg text-gray-400">
+          A complete Git flow, along with pushing the code to GitHub, looks like
+          this:
+        </p>
+      </section>
+      <section class="h-auto">
+        <img
+          src="flow.PNG"
+          alt="Repository Image"
+          class="w-[500px] h-auto w-[70%] object-cover rounded-lg shadow-md mt-6 mx-auto"
+        />
+      </section>
+
+      <div class="my-12 h-[1px] bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
+
+      <!-- Logs Section -->
+      <section class="my-8">
+        <h2 class="text-4xl font-bold text-gray-100">
+          Step 6: Viewing Commit Logs
+        </h2>
+
+        <p class="text-lg text-gray-400 mt-2">
+          Once you've made a few commits, you'll want to review what changes
+          have been made over time. Git provides a powerful way to see your
+          project history using:
+        </p>
+
+        <div class="bg-gray-800 text-white p-4 rounded-lg mt-4">
+          <code class="text-green-400 text-xl">git log</code>
+        </div>
+
+        <p class="text-lg text-gray-400 mt-4">
+          This command displays a list of all commits in reverse chronological
+          order — showing details like the commit hash, author, date, and commit
+          message.
+        </p>
+
+        <p class="text-lg text-gray-400 mt-4">
+          If you prefer a cleaner and more concise view, try adding the
+          <span class="text-yellow-400">--oneline</span> flag:
+        </p>
+
+        <div class="bg-gray-800 text-white p-4 rounded-lg mt-4">
+          <code class="text-green-400 text-xl">git log --oneline</code>
+        </div>
+
+        <p class="text-lg text-gray-400 mt-4">
+          This shortens each commit to a single line, showing the abbreviated
+          hash and the commit message — great for a quick overview of your
+          history.
+        </p>
+
+        <p class="text-lg text-gray-400 mt-4">
+          ☕️ Need more power? Explore the full Git log documentation
+          <a
+            href="https://git-scm.com/docs/git-log"
+            target="_blank"
+            class="text-blue-400 underline"
+            >here</a
+          >.
+        </p>
+
+        <p class="text-lg text-gray-400 mt-4">
+          ✨ <strong>Pro tip:</strong> Use
+          <span class="text-green-400">atomic commits</span> — each commit
+          should represent a single, focused change. This keeps your history
+          clean, readable, and easy to debug or revert when necessary.
+        </p>
+      </section>
+
+      <div class="my-12 h-[1px] bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
+
+      <!-- gitignore Section -->
+      <section class="my-8">
+        <h2 class="text-4xl font-bold text-gray-100">Using <code>.gitignore</code></h2>
+      
+        <p class="text-lg text-gray-400 mt-2">
+          Not everything in your project needs to be tracked. The <span class="font-semibold">.gitignore</span> file tells Git which files or folders to completely ignore.
+          This helps keep your repository clean and free of clutter like temporary files, system configs, or huge dependency folders.
+        </p>
+      
+        <p class="text-lg text-gray-400 mt-4">
+          To use it, create a <code class="font-semibold">.gitignore</code> file at the root of your project and list the paths you want Git to skip.
+          Here's a simple example:
+        </p>
+      
+        <div class="bg-gray-800 text-white p-4 rounded-lg mt-4">
+          <pre><code class="text-green-400 text-xl">node_modules/
+      .env
+      .vscode/</code></pre>
+        </div>
+      
+        <p class="text-lg text-gray-400 mt-4">
+          In this setup:
+          <ul class="list-disc list-inside text-gray-400 mt-2">
+            <li><span class="text-yellow-400">node_modules/</span> – skips all installed packages (common in Node.js projects)</li>
+            <li><span class="text-yellow-400">.env</span> – protects your environment variables and secrets</li>
+            <li><span class="text-yellow-400">.vscode/</span> – ignores your editor’s personal settings</li>
+          </ul>
+        </p>
+      
+        <p class="text-lg text-gray-400 mt-4">
+          After setting this up, running <code class="text-green-400">git status</code> will no longer show those ignored files — making your workflow cleaner and more secure.
+        </p>
+      
+        <p class="text-lg text-gray-400 mt-4">
+          🛡️ Pro tip: You can find pre-made <code>.gitignore</code> templates for different languages and frameworks at 
+          <a href="https://github.com/github/gitignore" target="_blank" class="text-blue-400 underline">github.com/github/gitignore</a>.
+        </p>
+      </section>
+      
+      <div class="my-12 h-[1px] bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
+
 
         <section>
-            <p class="text-lg text-gray-400">Not all folders are meant to be tracked by Git. Here we can see that all
-                green folders (projects) are getting tracked by Git, but red ones are not. Git tracks the changes made
-                to files in the repository and allows you to push, pull, and collaborate with others using platforms
-                like GitHub.</p>
+  <h2 class="text-3xl font-semibold text-gray-100 mb-4">🕰️ Reverting to a Previous State</h2>
+  <p class="text-lg text-gray-400">
+    Sometimes, you may want to go back to a previous commit — either just to view it or to completely roll back your changes. Here's how to do both.
+  </p>
+
+  <h3 class="text-2xl font-semibold text-gray-200 mt-8 mb-2">🔍 View a Previous Commit (Detached HEAD)</h3>
+  <p class="text-lg text-gray-400">
+    If you just want to *view* a past commit without altering the current history, use:
+  </p>
+  <div class="bg-gray-800 text-white p-4 rounded-lg mt-2">
+    <code class="text-green-400 text-xl">git checkout &lt;commit-hash&gt;</code>
+  </div>
+  <p class="text-lg text-gray-400 mt-2">
+    This places you in a <span class="text-yellow-400">detached HEAD</span> state — you’re not on any branch, just viewing a snapshot.
+  </p>
+
+  <h3 class="text-2xl font-semibold text-gray-200 mt-8 mb-2">🌱 Create a Branch from That Commit</h3>
+  <p class="text-lg text-gray-400">
+    Want to continue work from that old commit? Create a new branch starting from it:
+  </p>
+  <div class="bg-gray-800 text-white p-4 rounded-lg mt-2">
+    <code class="text-green-400 text-xl">git checkout -b &lt;new-branch-name&gt;</code>
+  </div>
+  <p class="text-lg text-gray-400 mt-2">
+    Now you can start fresh from that historical point — perfect for hotfixes or alternate features.
+  </p>
+
+  <h3 class="text-2xl font-semibold text-gray-200 mt-8 mb-2">⚠️ Roll Back Your Current Branch</h3>
+  <p class="text-lg text-gray-400">
+    If you're sure you want to move your branch back and discard all commits after a certain point:
+  </p>
+  <div class="bg-gray-800 text-white p-4 rounded-lg mt-2">
+    <code class="text-green-400 text-xl">git reset --hard &lt;commit-hash&gt;</code>
+  </div>
+  <p class="text-lg text-gray-400 mt-2">
+    This is a powerful (and dangerous) command. It <span class="text-red-400 font-semibold">permanently deletes</span> all commits after the one you specify. Use with caution!
+  </p>
         </section>
 
-        <!-- Your Config Settings Section -->
-        <section>
-            <h2 class="text-3xl font-semibold text-gray-100">Your Config Settings</h2>
-            <p class="text-lg text-gray-400">GitHub has a lot of settings that you can change. You can change your
-                username, email, and other settings. Whenever you checkpoint your changes, Git will add some information
-                about you, such as your username and email, to the commit. There is a Git config file that stores all
-                the settings that you have changed. You can also set preferences like what editor you'd like to use, and
-                there are both global and repository-specific settings.</p>
+      <div class="my-12 h-[1px] bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
 
-            <p class="text-lg text-gray-400 mt-4">Let’s set up your email and username in this config file. I would
-                recommend you create an account on GitHub and then use the email and username that you have created.</p>
+      <!-- Conclusion Section -->
+      <section>
+        <h2 class="text-4xl font-bold text-gray-100">Conclusion</h2>
+        <p class="text-lg text-gray-400">
+          In this section, we have learned about the basics of git and how to
+          use it to track changes to your files and folders. We have also
+          learned about the different commands that you can use to interact with
+          your repository, such as <code class="text-green-400">init</code>,
+          <code class="text-green-400">add</code>,
+          <code class="text-green-400">commit</code>,
+          <code class="text-green-400">log</code>, etc.
+        </p>
 
-            <div class="bg-gray-800 text-white p-4 rounded-lg mt-4">
-                <code class="text-green-400 text-xl">git config --global user.email "your-email@example.com"</code><br>
-                <code class="text-green-400 text-xl">git config --global user.name "Your Name"</code>
-            </div>
-
-            <p class="text-lg text-gray-400 mt-4">Now you can check your config settings:</p>
-
-            <div class="bg-gray-800 text-white p-4 rounded-lg mt-4">
-                <code class="text-green-400 text-xl">git config --list</code>
-            </div>
-
-            <p class="text-lg text-gray-400 mt-4">This will show you all the settings that you have changed. You can
-                check and modify your global or repository-specific configurations here.</p>
-        </section>
-
-        <!-- Creating a Repository Section -->
-        <section>
-            <h2 class="text-3xl font-semibold text-gray-100">Creating a Repository</h2>
-            <p class="text-lg text-gray-400">Creating a repository is a process of creating a new folder on your system
-                and initializing it as a Git repository. It’s just a regular folder where you code your project; you are
-                simply asking Git to track it. To create a repository, you can use the following commands:</p>
-
-            <div class="bg-gray-800 text-white p-4 rounded-lg mt-4">
-                <code class="text-green-400 text-xl">git status</code><br>
-                <code class="text-green-400 text-xl">git init</code>
-            </div>
-
-            <p class="text-lg text-gray-400 mt-4">The <code class="text-green-400">git status</code> command will show
-                you the current state of your repository. The <code class="text-green-400">git init</code> command will
-                create a new folder on your system and initialize it as a Git repository. This adds a hidden <code
-                    class="text-green-400">.git</code> folder to your project, which Git uses to track changes.</p>
-        </section>
-
-        <!-- Commit Section -->
-        <section>
-            <h2 class="text-3xl font-semibold text-gray-100">Commit</h2>
-            <p class="text-lg text-gray-400">A commit is a way to save your changes to your repository. It is a way to
-                record your changes and make them permanent. You can think of a commit as a snapshot of your code at a
-                particular point in time. When you commit your changes, you are telling Git to save them in a permanent
-                way. This way, you can always go back to that point in time and see what you changed.</p>
-
-            <p class="text-lg text-gray-400 mt-4">The usual flow looks like this:</p>
-
-            <ol class="list-decimal pl-6 space-y-2 text-lg text-gray-400">
-                <li>Make changes to your code</li>
-                <li>Stage the changes using <code class="text-green-400">git add .</code></li>
-                <li>Commit the changes with a message using <code
-                        class="text-green-400">git commit -m "Your commit message"</code></li>
-            </ol>
-        </section>
-
-        <section class="h-auto">
-            <img src="process.PNG" alt="Repository Image"
-                class="w-[500px] h-auto w-[70%] object-cover rounded-lg shadow-md mt-6 mx-auto">
-        </section>
-
-        <!-- Complete Git Flow Section -->
-        <section>
-            <h2 class="text-3xl font-semibold text-gray-100">Complete Git Flow</h2>
-            <p class="text-lg text-gray-400">A complete Git flow, along with pushing the code to GitHub, looks like
-                this:</p>
-
-        </section>
-        <section class="h-auto">
-            <img src="flow.PNG" alt="Repository Image"
-                class="w-[500px] h-auto w-[70%] object-cover rounded-lg shadow-md mt-6 mx-auto">
-        </section>
-        <section>
-            <div class="bg-gray-800 text-white p-4 rounded-lg mt-4">
-                <code class="text-green-400 text-xl">git init</code><br>
-                <code class="text-green-400 text-xl">git add .</code><br>
-                <code class="text-green-400 text-xl">git commit -m "Your commit message"</code><br>
-            </div>
-
-            <p class="text-lg text-gray-400 mt-4">When you want to track a new folder, you first use <code
-                    class="text-green-400">git init</code> to create a new repository. Then, you can use <code
-                    class="text-green-400">git add</code> to add the folder to the repository. After that, you use <code
-                    class="text-green-400">git commit</code> to save the changes. Finally, you use <code
-                    class="text-green-400">git push</code> to push the changes to GitHub. Of course, there is more to
-                it, but this is the basic flow.</p>
-        </section>
-
-
-        <!-- Stage Section -->
-        <section>
-            <h2 class="text-3xl font-semibold text-gray-100">Stage</h2>
-            <p class="text-lg text-gray-400">Stage is a way to tell git to track a particular file or folder. You can
-                use the following command to stage a file:</p>
-
-            <div class="bg-gray-800 text-white p-4 rounded-lg mt-4">
-                <code class="text-green-400 text-xl">git init</code><br>
-                <code class="text-green-400 text-xl">git add &lt;file&gt; &lt;file2&gt;</code><br>
-                <code class="text-green-400 text-xl">git status</code>
-            </div>
-
-            <p class="text-lg text-gray-400 mt-4">Here we are initializing the repository and adding a file to the
-                repository. Then, we can see that the file is now being tracked by Git. Currently, our files are in the
-                staging area. This means that we have not yet committed the changes but are ready to be committed.</p>
-        </section>
-
-        <!-- Commit Section -->
-        <section>
-            <h2 class="text-3xl font-semibold text-gray-100">Commit</h2>
-            <p class="text-lg text-gray-400">To commit your changes to the repository, use the following commands:</p>
-
-            <div class="bg-gray-800 text-white p-4 rounded-lg mt-4">
-                <code class="text-green-400 text-xl">git commit -m "commit message"</code><br>
-                <code class="text-green-400 text-xl">git status</code>
-            </div>
-
-            <p class="text-lg text-gray-400 mt-4">Here we are committing the changes to the repository. After
-                committing, we can see that the changes are now committed to the repository. The <span
-                    class="text-yellow-400">-m</span> flag is used to add a message to the commit. This message serves
-                as a short description of the changes that were made. You can use this message to remember what the
-                changes were.</p>
-
-            <p class="text-lg text-gray-400 mt-4">If you forget to use the <span class="text-yellow-400">-m</span> flag,
-                Git will open your default editor (usually VIM) to prompt you for a commit message. We will change the
-                default editor to VSCode in the next section.</p>
-        </section>
-
-        <!-- Logs Section -->
-        <section>
-            <h2 class="text-3xl font-semibold text-gray-100">Logs</h2>
-            <p class="text-lg text-gray-400">To view the history of commits in your repository, you can use the
-                following command:</p>
-
-            <div class="bg-gray-800 text-white p-4 rounded-lg mt-4">
-                <code class="text-green-400 text-xl">git log</code>
-            </div>
-
-            <p class="text-lg text-gray-400 mt-4">This command will show you all the commits made to the repository,
-                including details like the commit hash, author, date, and commit message.</p>
-
-            <p class="text-lg text-gray-400 mt-4">If you want a more compact view that only shows the commit message,
-                you can use the <span class="text-yellow-400">--oneline</span> flag:</p>
-
-            <div class="bg-gray-800 text-white p-4 rounded-lg mt-4">
-                <code class="text-green-400 text-xl">git log --oneline</code>
-            </div>
-
-            <p class="text-lg text-gray-400 mt-4">This will show a brief summary of each commit, making it easier to
-                review your commit history.</p>
-
-            <p class="text-lg text-gray-400 mt-4">☕️ - Check the official <a href="https://git-scm.com/docs/git-log"
-                    target="_blank" class="text-blue-400">Git log docs</a> for more information.</p>
-
-            <p class="text-lg text-gray-400 mt-4">Atomic commits are a way to ensure that each commit is a
-                self-contained unit of work. This means that if a commit fails, you can always revert to a previous
-                commit to fix the issue. Atomic commits are important for maintaining a clean and organized history in
-                your repository.</p>
-        </section>
-
-        <!-- gitignore Section -->
-        <section>
-            <h2 class="text-3xl font-semibold text-gray-100">gitignore</h2>
-            <p class="text-lg text-gray-400">A <span class="font-semibold">gitignore</span> file tells Git which files
-                and folders to ignore. It’s a way to prevent Git from tracking certain files that don’t need to be
-                versioned, such as temporary files, build artifacts, or configuration files.</p>
-
-            <p class="text-lg text-gray-400 mt-4">You can create a <span class="font-semibold">.gitignore</span> file
-                and add the list of files and folders you want Git to ignore. Here's an example of a typical gitignore
-                file:</p>
-
-            <div class="bg-gray-800 text-white p-4 rounded-lg mt-4">
-                <pre><code class="text-green-400 text-xl">node_modules
-.env
-.vscode</code></pre>
-            </div>
-
-            <p class="text-lg text-gray-400 mt-4">In this example, the <span
-                    class="text-yellow-400">node_modules</span>, <span class="text-yellow-400">.env</span>, and <span
-                    class="text-yellow-400">.vscode</span> folders are ignored by Git.</p>
-
-            <p class="text-lg text-gray-400 mt-4">Now, when you run the <code
-                    class="text-green-400 text-xl">git status</code> command, Git will no longer track or show these
-                files as being modified.</p>
-        </section>
-
-        <!-- Conclusion Section -->
-        <section>
-            <h2 class="text-3xl font-semibold text-gray-100">Conclusion</h2>
-            <p class="text-lg text-gray-400">In this section, we have learned about the basics of git and how to use it
-                to track changes to your files and folders. We have also learned about the different commands that you
-                can use to interact with your repository, such as <code class="text-green-400">init</code>, <code
-                    class="text-green-400">add</code>, <code class="text-green-400">commit</code>, <code
-                    class="text-green-400">log</code>, etc.</p>
-
-            <p class="text-lg text-gray-400 mt-4">By the end of this section, you should have a good understanding of
-                how to use git and how to use it effectively to manage your code.</p>
-        </section>
-
+        <p class="text-lg text-gray-400 mt-4">
+          By the end of this section, you should have a good understanding of
+          how to use git and how to use it effectively to manage your code.
+        </p>
+      </section>
 
         <!-- Button to move to next page -->
         <div class="flex justify-center gap-4">
-            <div class="flex justify-center">
-                <a href="basics.html"
-                    class="bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-500 transition">Previous</a>
-            </div>
-            <!-- Button to move to next page -->
-            <div class="flex justify-center">
-                <a href="branches.html"
-                    class="bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-500 transition">Next</a>
-            </div>
+          <div class="flex justify-center">
+            <a
+              href="index.html"
+              class="bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-500 transition"
+              >Previous</a
+            >
+          </div>
+          <!-- Button to move to next page -->
+          <div class="flex justify-center">
+            <a
+              href="branches.html"
+              class="bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-500 transition"
+              >Next</a
+            >
+          </div>
         </div>
-
     </main>
 
-    <script>
-        function nextPage() {
-            // Change this to your next page URL or a specific function to navigate
-            window.location.href = "#";
-        }
-    </script>
-
-</body>
-
+  </body>
 </html>
