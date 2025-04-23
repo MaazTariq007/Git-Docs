@@ -15,6 +15,21 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap"
       rel="stylesheet"
     />
+
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+
+      /* h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Montserrat", sans-serif;
+      } */
+    </style>
   </head>
 
   <body class="bg-gray-900 text-gray-200 font-poppins leading-relaxed">
@@ -208,7 +223,7 @@
       ></div>
 
       <section class="border-t border-gray-700 mt-16 pt-12">
-        <h2 class="text-3xl font-semibold text-gray-100">
+        <h2 class="text-4xl font-bold text-gray-100">
           🔀 Fast-Forward Merge in Git
         </h2>
         <p class="text-lg text-gray-400 mt-4">
@@ -321,7 +336,7 @@
 
       <section>
         <h2
-          class="text-3xl font-bold text-gray-100 mt-12 border-t border-gray-600 pt-8"
+          class="text-3xl font-bold text-gray-100 mt-12 border-t border-gray-600 pt-8 my-3"
         >
           🔀 3-Way Merge (Non Fast-Forward)
         </h2>
@@ -422,43 +437,54 @@
       ></div>
 
       <section>
-        <h3 class="text-4xl font-bold text-gray-200 mt-10 mb-6">Useful Git Branch Commands</h3>
+        <h3 class="text-4xl font-bold text-gray-200 mt-10 mb-6">
+          Useful Git Branch Commands
+        </h3>
 
         <!-- Rename Branch -->
         <p class="text-lg text-gray-400">
-          🔁 <span class="font-semibold text-white">Rename a branch</span> using:
+          🔁
+          <span class="font-semibold text-white">Rename a branch</span> using:
         </p>
         <div class="bg-gray-800 text-white p-4 rounded-lg mt-2 mb-4">
-          <code class="text-green-400 text-lg">git branch -m &lt;old-branch-name&gt; &lt;new-branch-name&gt;</code>
+          <code class="text-green-400 text-lg"
+            >git branch -m &lt;old-branch-name&gt; &lt;new-branch-name&gt;</code
+          >
         </div>
-        
+
         <!-- Delete Branch -->
         <p class="text-lg text-gray-400">
           🗑️ <span class="font-semibold text-white">Delete a branch</span> with:
         </p>
         <div class="bg-gray-800 text-white p-4 rounded-lg mt-2 mb-4">
-          <code class="text-green-400 text-lg">git branch -d &lt;branch-name&gt;</code>
+          <code class="text-green-400 text-lg"
+            >git branch -d &lt;branch-name&gt;</code
+          >
         </div>
-        
+
         <!-- Checkout Branch -->
         <p class="text-lg text-gray-400">
-          📦 <span class="font-semibold text-white">Checkout a branch</span> to start working on it:
+          📦 <span class="font-semibold text-white">Checkout a branch</span> to
+          start working on it:
         </p>
         <div class="bg-gray-800 text-white p-4 rounded-lg mt-2 mb-4">
-          <code class="text-green-400 text-lg">git checkout &lt;branch-name&gt;</code>
+          <code class="text-green-400 text-lg"
+            >git checkout &lt;branch-name&gt;</code
+          >
         </div>
-        
+
         <!-- List Branches -->
         <p class="text-lg text-gray-400">
-          📋 <span class="font-semibold text-white">List all branches</span> in your repository:
+          📋 <span class="font-semibold text-white">List all branches</span> in
+          your repository:
         </p>
         <div class="bg-gray-800 text-white p-4 rounded-lg mt-2">
           <code class="text-green-400 text-lg">git branch</code>
         </div>
         <p class="text-lg text-gray-400 mt-2">
-          The current branch will be marked with an asterisk <span class="text-yellow-400">*</span>.
+          The current branch will be marked with an asterisk
+          <span class="text-yellow-400">*</span>.
         </p>
-        
       </section>
 
       <!-- Button to move to next page -->
