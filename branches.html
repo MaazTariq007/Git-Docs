@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Git and GitHub Documentation - Terminology</title>
-    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon" />
     <!-- Link to TailwindCSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link
@@ -78,7 +78,7 @@
           using:
         </p>
         <div class="bg-gray-800 text-white p-4 rounded-lg mt-2">
-          <code class="text-green-400 text-xl">git branch</code>
+          <code class="text-green-400 text-lg">git branch</code>
         </div>
         <p class="text-lg text-gray-400 mt-2">
           This shows all branches. The current branch is highlighted with an
@@ -92,7 +92,7 @@
           To create a new branch without switching to it:
         </p>
         <div class="bg-gray-800 text-white p-4 rounded-lg mt-2">
-          <code class="text-green-400 text-xl"
+          <code class="text-green-400 text-lg"
             >git branch &lt;branch-name&gt;</code
           >
         </div>
@@ -108,7 +108,7 @@
           After creating a branch, switch to it with:
         </p>
         <div class="bg-gray-800 text-white p-4 rounded-lg mt-2">
-          <code class="text-green-400 text-xl"
+          <code class="text-green-400 text-lg"
             >git checkout &lt;branch-name&gt;</code
           >
         </div>
@@ -126,7 +126,7 @@
           make switching branches more intuitive:
         </p>
         <div class="bg-gray-800 text-white p-4 rounded-lg mt-2">
-          <code class="text-green-400 text-xl"
+          <code class="text-green-400 text-lg"
             >git switch &lt;branch-name&gt;</code
           >
         </div>
@@ -144,7 +144,7 @@
           to it:
         </p>
         <div class="bg-gray-800 text-white p-4 rounded-lg mt-2">
-          <code class="text-green-400 text-xl"
+          <code class="text-green-400 text-lg"
             >git checkout -b &lt;branch-name&gt;</code
           >
         </div>
@@ -160,7 +160,7 @@
           You can check which branch you’re currently on by running:
         </p>
         <div class="bg-gray-800 text-white p-4 rounded-lg mt-2">
-          <code class="text-green-400 text-xl">git branch</code>
+          <code class="text-green-400 text-lg">git branch</code>
         </div>
         <p class="text-lg text-gray-400 mt-2">
           The active branch will be highlighted with an asterisk (<span
@@ -181,7 +181,7 @@
           can use:
         </p>
         <div class="bg-gray-800 text-white p-4 rounded-lg mt-2">
-          <code class="text-green-400 text-xl"
+          <code class="text-green-400 text-lg"
             >git log --oneline --decorate</code
           >
         </div>
@@ -206,6 +206,260 @@
       <div
         class="my-10 h-[1px] bg-gradient-to-r from-transparent via-gray-700 to-transparent"
       ></div>
+
+      <section class="border-t border-gray-700 mt-16 pt-12">
+        <h2 class="text-3xl font-semibold text-gray-100">
+          🔀 Fast-Forward Merge in Git
+        </h2>
+        <p class="text-lg text-gray-400 mt-4">
+          A fast-forward merge is the simplest type of merge in Git. It happens
+          when the branch you are merging is directly ahead of the current
+          branch — meaning there's no divergence or conflicts. Let's walk
+          through a real example.
+        </p>
+
+        <section class="h-auto my-5">
+          <img
+            src="fastmerge.JPG"
+            alt="Git Image"
+            class="w-[900px] h-auto object-cover rounded-lg shadow-md mt-6 mx-auto"
+          />
+        </section>
+
+        <div class="bg-gray-800 text-white p-4 rounded-lg mt-2">
+          <code class="text-green-400 text-lg"
+            >git merge &lt;branch-name&gt;</code
+          >
+        </div>
+
+        <h3 class="text-4xl font-bold text-gray-200 mt-8 mb-2">
+          📁 Step-by-Step: Building a Navbar
+        </h3>
+        <p class="text-lg text-gray-400">
+          Imagine you’re working on a basic website. You start by creating an
+          <code>index.html</code> on the
+          <code class="text-yellow-400">main</code> branch. Then, you decide to
+          build the navbar separately in a feature branch.
+        </p>
+
+        <h4 class="text-xl font-bold text-gray-200 mt-6 mb-2">
+          Step 1: Initialize your project and commit the base file
+        </h4>
+        <div class="bg-gray-800 text-white p-4 rounded-lg mt-2">
+          <code class="text-green-400 text-lg">git init</code><br />
+          <code class="text-green-400 text-lg">touch index.html</code><br />
+          <code class="text-green-400 text-lg">git add .</code><br />
+          <code class="text-green-400 text-lg"
+            >git commit -m "Initial commit with index.html"</code
+          >
+        </div>
+
+        <h4 class="text-xl font-bold text-gray-200 mt-6 mb-2">
+          Step 2: Create a new branch for the navbar feature
+        </h4>
+        <p class="text-lg text-gray-400">
+          You don't want to mess up your main branch while experimenting, so you
+          create a new one:
+        </p>
+        <div class="bg-gray-800 text-white p-4 rounded-lg mt-2">
+          <code class="text-green-400 text-lg">git checkout -b navbar</code>
+        </div>
+
+        <h4 class="text-xl font-bold text-gray-200 mt-6 mb-2">
+          Step 3: Work on the navbar and commit the changes
+        </h4>
+        <p class="text-lg text-gray-400">
+          Add a navbar in your <code>index.html</code> and commit it on the
+          <code class="text-yellow-400">navbar</code> branch.
+        </p>
+        <div class="bg-gray-800 text-white p-4 rounded-lg mt-2">
+          <code class="text-green-400 text-lg">git add index.html</code><br />
+          <code class="text-green-400 text-lg"
+            >git commit -m "Added navbar to index.html"</code
+          >
+        </div>
+
+        <h4 class="text-xl font-bold text-gray-200 mt-6 mb-2">
+          Step 4: Merge the feature back into main (Fast-Forward)
+        </h4>
+        <p class="text-lg text-gray-400">
+          Before you run the merge command, make sure you are
+          <span class="text-yellow-300 font-semibold"
+            >on the branch you want to merge <u>into</u></span
+          >
+          — in this case, <code class="text-yellow-400">main</code>.
+        </p>
+        <p class="text-lg text-gray-400 mt-2">
+          Now, switch to the <code class="text-yellow-400">main</code> branch
+          and merge:
+        </p>
+        <div class="bg-gray-800 text-white p-4 rounded-lg mt-2">
+          <code class="text-green-400 text-lg">git checkout main</code><br />
+          <code class="text-green-400 text-lg">git merge navbar</code>
+        </div>
+        <p class="text-lg text-gray-400 mt-2">
+          Since no changes were made on <code>main</code> after the branch was
+          created, this is a fast-forward merge — Git simply moves the pointer
+          forward.
+        </p>
+
+        <h4 class="text-xl font-bold text-gray-200 mt-6 mb-2">
+          Step 5: (Optional) Clean up your branch
+        </h4>
+        <p class="text-lg text-gray-400">
+          If you’re done with the feature branch, you can delete it:
+        </p>
+        <div class="bg-gray-800 text-white p-4 rounded-lg mt-2">
+          <code class="text-green-400 text-lg">git branch -d navbar</code>
+        </div>
+
+        <p class="text-lg text-gray-400 mt-6">
+          ✅ That’s it! You’ve successfully merged a feature branch using
+          fast-forward. Clean, simple, and no conflicts!
+        </p>
+      </section>
+
+      <section>
+        <h2
+          class="text-3xl font-bold text-gray-100 mt-12 border-t border-gray-600 pt-8"
+        >
+          🔀 3-Way Merge (Non Fast-Forward)
+        </h2>
+
+        <p class="text-lg text-gray-400">
+          A
+          <span class="font-semibold text-yellow-300">3-way merge</span> occurs
+          when both branches have progressed independently after their common
+          ancestor. Git uses the base (common ancestor), the source branch, and
+          the target branch to combine changes. This is common in collaborative
+          workflows.
+        </p>
+
+        <div class="my-6">
+          <img
+            src="mergerefer.JPG"
+            alt="Git Image"
+            class="w-[900px] h-auto object-cover rounded-lg shadow-md mt-6 mx-auto"
+          />
+          <p class="text-sm text-gray-500 text-center mt-2">
+            Visual Representation: Blue = master commits, Red = feature commits
+          </p>
+        </div>
+
+        <h3 class="text-2xl font-semibold text-gray-200 mt-6 mb-2">
+          📁 Example Scenario
+        </h3>
+        <ul class="list-disc list-inside text-lg text-gray-400 ml-4">
+          <li>
+            You're on <code class="text-yellow-300">main</code> branch and
+            create a new branch called
+            <code class="text-yellow-300">feature</code>.
+          </li>
+          <li>
+            On <code>feature</code>, you create a new file
+            <code>feature.html</code> and commit your changes.
+          </li>
+          <li>
+            Meanwhile, your teammate commits changes to
+            <code>index.html</code> on <code>main</code>.
+          </li>
+          <li>
+            Now both branches have unique new commits — they have diverged.
+          </li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold text-gray-200 mt-6 mb-2">
+          🧠 Important Note
+        </h3>
+        <p class="text-lg text-red-400">
+          You must be on the branch that you want the changes to be merged
+          <strong>into</strong>.<br />
+          For example: If you want to merge <code>feature</code> into
+          <code>main</code>, first switch to <code>main</code>.
+        </p>
+
+        <h3 class="text-2xl font-semibold text-gray-200 mt-6 mb-2">
+          🔧 Merge Steps
+        </h3>
+        <ol class="list-decimal list-inside text-lg text-gray-400 ml-4">
+          <li>
+            Switch to the target branch (main):
+            <div class="bg-gray-800 text-white p-4 rounded-lg mt-2">
+              <code class="text-green-400 text-lg">git checkout main</code>
+            </div>
+          </li>
+          <li class="mt-4">
+            Merge the feature branch:
+            <div class="bg-gray-800 text-white p-4 rounded-lg mt-2">
+              <code class="text-green-400 text-lg">git merge feature</code>
+            </div>
+          </li>
+          <li class="mt-4">
+            Git will detect the different commit histories and perform a 3-way
+            merge.<br />
+            If there are no conflicts, the merge completes automatically.<br />
+            If conflicts exist, Git marks them in files and asks you to resolve
+            manually.
+          </li>
+          <li class="mt-4">
+            Resolve the conflicts in a code editor, then:
+            <div class="bg-gray-800 text-white p-4 rounded-lg mt-2">
+              <code class="text-green-400 text-lg">git add .</code><br />
+              <code class="text-green-400 text-lg">git commit</code>
+            </div>
+          </li>
+        </ol>
+
+        <p class="text-lg text-gray-400 mt-4">
+          Now <code>main</code> includes both the
+          <code>index.html</code> updates and the new
+          <code>feature.html</code> file — a successful 3-way merge!
+        </p>
+      </section>
+
+      <div
+        class="my-10 h-[1px] bg-gradient-to-r from-transparent via-gray-700 to-transparent"
+      ></div>
+
+      <section>
+        <h3 class="text-4xl font-bold text-gray-200 mt-10 mb-6">Useful Git Branch Commands</h3>
+
+        <!-- Rename Branch -->
+        <p class="text-lg text-gray-400">
+          🔁 <span class="font-semibold text-white">Rename a branch</span> using:
+        </p>
+        <div class="bg-gray-800 text-white p-4 rounded-lg mt-2 mb-4">
+          <code class="text-green-400 text-lg">git branch -m &lt;old-branch-name&gt; &lt;new-branch-name&gt;</code>
+        </div>
+        
+        <!-- Delete Branch -->
+        <p class="text-lg text-gray-400">
+          🗑️ <span class="font-semibold text-white">Delete a branch</span> with:
+        </p>
+        <div class="bg-gray-800 text-white p-4 rounded-lg mt-2 mb-4">
+          <code class="text-green-400 text-lg">git branch -d &lt;branch-name&gt;</code>
+        </div>
+        
+        <!-- Checkout Branch -->
+        <p class="text-lg text-gray-400">
+          📦 <span class="font-semibold text-white">Checkout a branch</span> to start working on it:
+        </p>
+        <div class="bg-gray-800 text-white p-4 rounded-lg mt-2 mb-4">
+          <code class="text-green-400 text-lg">git checkout &lt;branch-name&gt;</code>
+        </div>
+        
+        <!-- List Branches -->
+        <p class="text-lg text-gray-400">
+          📋 <span class="font-semibold text-white">List all branches</span> in your repository:
+        </p>
+        <div class="bg-gray-800 text-white p-4 rounded-lg mt-2">
+          <code class="text-green-400 text-lg">git branch</code>
+        </div>
+        <p class="text-lg text-gray-400 mt-2">
+          The current branch will be marked with an asterisk <span class="text-yellow-400">*</span>.
+        </p>
+        
+      </section>
 
       <!-- Button to move to next page -->
       <div class="flex justify-center gap-4">
